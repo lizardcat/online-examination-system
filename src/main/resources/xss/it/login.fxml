@@ -36,12 +36,12 @@
    <right>
       <AnchorPane prefHeight="400.0" prefWidth="341.0" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="94.0" layoutY="39.0" text="Secure Login">
+            <Label layoutX="88.0" layoutY="41.0" text="Secure Login">
                <font>
-                  <Font size="24.0" />
+                  <Font size="26.0" />
                </font>
             </Label>
-            <Label layoutX="53.0" layoutY="87.0" prefHeight="37.0" prefWidth="227.0" textFill="RED">
+            <Label fx:id="labelLabel" layoutX="53.0" layoutY="87.0" prefHeight="37.0" prefWidth="227.0" textFill="RED" text='' visible="false">
                <font>
                   <Font size="13.0" />
                </font>
@@ -66,12 +66,12 @@
                   <Font size="14.0" />
                </font>
             </PasswordField>
-            <Button fx:id="loginButton" alignment="CENTER" layoutX="51.0" layoutY="245.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: #0033A0;" text="Login" textFill="WHITE">
+            <Button fx:id="loginButton" alignment="CENTER" layoutX="51.0" layoutY="245.0" mnemonicParsing="false" onAction="#onLoginClicked" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: #0033A0;" text="Login" textFill="WHITE">
                <font>
                   <Font name="Verdana Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="registerButton" alignment="CENTER" layoutX="51.0" layoutY="314.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: #0033A0;" text="Register" textFill="WHITE">
+            <Button fx:id="registerButton" alignment="CENTER" layoutX="51.0" layoutY="314.0" mnemonicParsing="false" onAction="#onRegisterClicked" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: #0033A0;" text="Register" textFill="WHITE">
                <font>
                   <Font name="Verdana Bold" size="14.0" />
                </font>

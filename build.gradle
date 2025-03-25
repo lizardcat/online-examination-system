@@ -12,7 +12,7 @@ version = '1.0.0'
 project.description='Just a javafx + spring boot demo'
 
 application {
-    mainClass ='xss.it.Launcher'
+    mainClass ='xss.it.FxApplication'
     applicationName ='Javafx-SpringBoot-Demo'
 }
 
@@ -38,6 +38,7 @@ java {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: '../libs')
+    implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation('org.springframework.boot:spring-boot-starter-data-jpa') {
         exclude module: 'hibernate-core'
@@ -53,7 +54,7 @@ dependencies {
 jar{
     manifest {
         attributes(
-                'Main-Class': 'xss.it.Launcher'
+                'Main-Class': 'xss.it.FxApplication'
         )
     }
 }
@@ -71,7 +72,7 @@ runtime {
     jpackage {
         installerOptions = [
                 '--description', project.description,
-                '--copyright', 'Copyright 2024',
+                '--copyright', 'Copyright 2025',
                 '--app-version',project.version,
                 '--vendor', 'My Company'
         ] as List<String>
