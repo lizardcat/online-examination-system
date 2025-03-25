@@ -45,7 +45,6 @@ public class FxApplication extends Application {
         stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
         stage.setResizable(false);
         stage.initStyle(StageStyle.UNDECORATED);
-        stage.setFullScreen(true);
 
         stage.setScene(new Scene(root));
         stage.show();
