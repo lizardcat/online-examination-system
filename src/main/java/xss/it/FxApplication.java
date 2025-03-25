@@ -4,7 +4,10 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.input.KeyCombination;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -32,7 +35,18 @@ public class FxApplication extends Application {
         loader.setControllerFactory(context::getBean); // Enables Spring injection in controllers
         Parent root = loader.load();
 
+        // Set title and icon
         stage.setTitle("Login Page");
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/xss/it/icon.png")));
+
+        // Lock down the UI
+        stage.setFullScreen(true);
+        stage.setFullScreenExitHint("");
+        stage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
+        stage.setResizable(false);
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setFullScreen(true);
+
         stage.setScene(new Scene(root));
         stage.show();
     }
