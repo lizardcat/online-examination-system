@@ -39,4 +39,25 @@ public class UserServiceImpl implements UserService {
     public void delete(Long id) {
         repo.deleteById(id);
     }
+
+    @Override
+    public boolean validateUser(String username, String password) {
+        Optional<User> userOpt = repo.findByUsername(username);
+        return userOpt.isPresent() && userOpt.get().getPassword().equals(password);
+    }
+
+    @Override
+    public boolean registerUser(String username, String password) {
+        if (repo.findByUsername(username).isPresent()) {
+            return false; // Username already exists
+        }
+
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword(password);
+        user.setRole("student"); // Default role; change if needed
+
+        repo.save(user);
+        return true;
+    }
 }

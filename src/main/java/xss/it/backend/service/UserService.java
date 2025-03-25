@@ -1,12 +1,9 @@
-
-
 package xss.it.backend.service;
 
 import xss.it.backend.entity.User;
 
 import java.util.List;
 import java.util.Optional;
-
 
 public interface UserService {
 
@@ -17,4 +14,8 @@ public interface UserService {
     List<User> findAll();
 
     void delete(Long id);
+
+    boolean validateUser(String username, String password);
+
+    boolean registerUser(String username, String password);
 }
