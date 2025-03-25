@@ -9,8 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xss.it.backend.controller.LoginController">
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xss.it.backend.controller.LoginController">
    <left>
       <AnchorPane prefHeight="400.0" prefWidth="266.0" style="-fx-background-color: #0033A0;" BorderPane.alignment="CENTER">
          <children>
@@ -41,7 +40,7 @@
                   <Font size="26.0" />
                </font>
             </Label>
-            <Label fx:id="labelLabel" layoutX="53.0" layoutY="87.0" prefHeight="37.0" prefWidth="227.0" textFill="RED" text='' visible="false">
+            <Label fx:id="labelLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="81.0" prefHeight="44.0" prefWidth="260.0" text="" textFill="RED" visible="false" wrapText="true">
                <font>
                   <Font size="13.0" />
                </font>
@@ -66,12 +65,12 @@
                   <Font size="14.0" />
                </font>
             </PasswordField>
-            <Button fx:id="loginButton" alignment="CENTER" layoutX="51.0" layoutY="245.0" mnemonicParsing="false" onAction="#onLoginClicked" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: #0033A0;" text="Login" textFill="WHITE">
+            <Button fx:id="loginButton" alignment="CENTER" layoutX="51.0" layoutY="263.0" mnemonicParsing="false" onAction="#onLoginClicked" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: #0033A0;" text="Login" textFill="WHITE">
                <font>
                   <Font name="Verdana Bold" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="registerButton" alignment="CENTER" layoutX="51.0" layoutY="314.0" mnemonicParsing="false" onAction="#onRegisterClicked" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: #0033A0;" text="Register" textFill="WHITE">
+            <Button fx:id="registerButton" alignment="CENTER" layoutX="51.0" layoutY="332.0" mnemonicParsing="false" onAction="#onRegisterClicked" prefHeight="40.0" prefWidth="230.0" style="-fx-background-color: #0033A0;" text="Register" textFill="WHITE">
                <font>
                   <Font name="Verdana Bold" size="14.0" />
                </font>
